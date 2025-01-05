@@ -49,7 +49,7 @@ alternate_mob_no_path = '//*[@id="home"]/form[1]/div/div[2]/table/tbody/tr[6]/td
 
 
 data_list = []
-for j in range(152) :
+for j in range(0,152) :
 
     url = f"https://aseemamatrimony.in/browseprofile/viewall.html?start={20*j}"  # Replace with the actual login URL
     driver.get(url)
