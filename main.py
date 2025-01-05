@@ -45,8 +45,14 @@ telephone_no_path = '//*[@id="home"]/form[1]/div/div[2]/table/tbody/tr[3]/td[2]'
 alternate_no_path = '//*[@id="home"]/form[1]/div/div[2]/table/tbody/tr[5]/td[2]'
 alternate_mob_no_path = '//*[@id="home"]/form[1]/div/div[2]/table/tbody/tr[6]/td[2]'
 
+
+
+
 data_list = []
-for j in range(1,152) :
+for j in range(152) :
+
+    url = f"https://aseemamatrimony.in/browseprofile/viewall.html?start={20*j}"  # Replace with the actual login URL
+    driver.get(url)
 
 
     for i in range(1,21) :
@@ -63,17 +69,11 @@ for j in range(1,152) :
 
 
         name=  driver.find_element(By.XPATH, name_path).text
-        print("name: ", name)
         DoB=  driver.find_element(By.XPATH, DoB_path).text
-        print("DoB: ", DoB)
         mob_no=  driver.find_element(By.XPATH, mobile_no_path).text
-        print("mob_no: ", mob_no)
         telephon_no=  driver.find_element(By.XPATH, telephone_no_path).text
-        print("telephon_no: ", telephon_no)
         alternate_no=  driver.find_element(By.XPATH, alternate_no_path).text
-        print("alternate_no: ", alternate_no)
         alernate_mob_no=  driver.find_element(By.XPATH, alternate_mob_no_path).text
-        print("alernate_mob_no: ", alernate_mob_no)
         time.sleep(1)
     
         data_list.append([name, DoB, mob_no, telephon_no, alternate_no, alernate_mob_no])
