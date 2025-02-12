@@ -7,8 +7,8 @@ import pandas as pd
 
 
 
-your_username = "vinayksk041@gmail.com"
-your_password = "Vinkri@2022"
+your_username = "example@gmail.com"
+your_password = "pass@@@@@@@word"
 # Set up the WebDriver dynamically
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
